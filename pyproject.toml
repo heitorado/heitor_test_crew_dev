@@ -1,0 +1,23 @@
+[project]
+name = "heitor_test_crew_dev"
+version = "0.1.0"
+description = "heitor_test_crew_dev using crewAI"
+authors = [{ name = "Your Name", email = "you@example.com" }]
+requires-python = ">=3.10,<3.13"
+dependencies = [
+    "crewai[tools]>=0.100.1,<1.0.0"
+]
+
+[project.scripts]
+heitor_test_crew_dev = "heitor_test_crew_dev.main:run"
+run_crew = "heitor_test_crew_dev.main:run"
+train = "heitor_test_crew_dev.main:train"
+replay = "heitor_test_crew_dev.main:replay"
+test = "heitor_test_crew_dev.main:test"
+
+[build-system]
+requires = ["hatchling"]
+build-backend = "hatchling.build"
+
+[tool.crewai]
+type = "crew"
